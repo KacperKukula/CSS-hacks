@@ -1,0 +1,96 @@
+/*Main*/
+body {
+    width: 100%; height: 100%;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 24px;
+
+    overflow: hidden;
+}
+.left {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    width: 30%; height: 100%;
+}
+/*Left side*/
+.logo {
+    width: 100%; height: 80px;
+    display: flex;
+}
+h1.logo-text {
+    margin: 5px 0 0 25px;
+
+    font-size: 60px;
+    font-family: 'Helvetica Bold', sans-serif;
+    font-weight: bold;
+
+    background: #00d8ed;
+    background: linear-gradient(to right, #00d8ed 0%, #00CF87 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+
+    /* background: #4a008b; //Switch
+    background: linear-gradient(to right, #4a008b 0%, #00DDB1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+
+}
+.switch {
+    width: 100px; height: 100%;
+    display: block;
+    background-color: #00CF87;
+}
+.menu {
+    width: 100%; height: 100%;
+
+    box-sizing: border-box;
+    border: 1px solid #ededed;
+    border-radius: 50px;
+    /* overflow: scroll; */
+}
+ul {
+    list-style: none;
+    padding: 0;
+}
+ul > li {
+    display: block;
+    width: 97%;
+
+    border: 1px solid #ededed;
+    border-radius: 50px;
+    background: linear-gradient(0deg, rgba(250,250,250,1) 0%, rgba(255,255,2455,1) 100%);
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 30px;
+    margin: 0 1.5% 5px 1.5%;
+    
+    transition: all 0.4s ease-in;
+}
+ul li:hover {
+    cursor: pointer;
+
+    transform: scale(1.2);
+}
+
+/* Right side */
+.right {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 70%; height: 100%;
+}
+article.display {
+    width: 100%; height: 100%;
+}
+
+/* Display */
+article.display {
+    font-size: 18px;
+}
+article.display h1 {
+    font-size: 36px;
+}
+article.display h2 {
+    font-size: 24px;
+}
+article.display p {
+    z-index: 1;   
+}

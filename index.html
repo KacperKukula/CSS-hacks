@@ -4,15 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fonts.css">
+    <script src="assets/js/string_validation.js" defer></script>
+    <script src="assets/js/spa.js" defer></script>
     <title>CSS Hacks</title>
 </head>
 <body>
+    <!--Left side (menu, logo->switch)-->
     <section class="left">
-        <div class="logo"></div>
-        <div class="menu">Some pome esse</div>
+        <div class="logo">
+            <h1 class="logo-text">CSS hacks</h1>
+            <div class="logo-switch"></div>
+        </div>
+        
+        <div class="menu">
+            <ul>
+                <li>Pozycjonowanie elementu na środku</li>
+                <li>Tajemnicze " " na stronie</li>
+                <li>Tekst na środku elementu</li>
+            </ul>
+        </div>
     </section>
+
+    <!--Right side (article)-->
+    <section class="right">
+        <article class="display"></article>
+    </section>
+    
 </body>
 </html>
