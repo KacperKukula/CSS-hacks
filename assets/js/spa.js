@@ -8,6 +8,7 @@ let li = document.querySelectorAll("li");
 for(let i=0; i<li.length; i++) {
     li[i].addEventListener("click", function(e) {
         let name = String.prototype.ChangeCharsToSave(e.target.innerHTML);
+        makeRequest('content/'+name+".html", _container)
     })
 }
 
@@ -15,6 +16,7 @@ for(let i=0; i<li.length; i++) {
 document.querySelector("article.display")
 
 //Request
+let _container = document.querySelector(".display")
 function makeRequest(_url, _container) {
     http_request = false;
 
@@ -43,10 +45,10 @@ function makeRequest(_url, _container) {
         if (http_request.readyState == 4) {
             if(http_request.status==200) {
                 /*//////////////////////////////////////----\\*/
-                
+                _container.innerHTML = http_request.response;
                 /*//////////////////////////////////////----//*/
             } else {
-                _container.innerHTML = "something is not right"
+                _container.innerHTML = "something is not right...<br>"+http_request.status
             }
         }
     };

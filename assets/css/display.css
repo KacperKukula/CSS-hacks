@@ -1,0 +1,28 @@
+/* Right side */
+.content {
+    position: absolute;
+    top: 0; bottom: 0; right: 0;
+    width: 70%; height: 100%;
+}
+
+/* Display */
+article.display {
+    position: absolute;
+    width: 90%; height: 90%;
+    top: 0; left: 0; right: 0;
+    margin: auto;
+    font-size: 18px;
+    padding: 0 0 0 20px;
+}
+article.display h1 {
+    font-size: 36px;
+    font-family: 'Helvetica Bold', 'Arial Bold', sans-serif;
+}
+article.display h2 {
+    font-size: 24px;
+    font-family: 'Helvetica Bold', 'Arial Bold', sans-serif;
+}
+
+pre {
+    padding: 0 0 0 0;
+}

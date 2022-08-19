@@ -1,5 +1,5 @@
 String.prototype.ChangeCharsToSave = function(_string) {
-    const Chars = new Map([
+    const Entities = new Map([
         [34,'~apo~'],
         [42,'~star~'],
         [47,'~slash~'],
@@ -12,14 +12,15 @@ String.prototype.ChangeCharsToSave = function(_string) {
     ]);
     const ForbiddenChars = [34, 42, 47, 58, 60, 62, 63, 92, 124];
 
-    array = _string.split("")
-    console.log(_string)
     for(let i=0; i<_string.length; i++) {
         for(let j=0; j<ForbiddenChars.length; j++) {
-            if(_string[i] == ForbiddenChars[j])
-                alert(_string[i])
+            if(_string.charCodeAt(i)==ForbiddenChars[j]) {
+                _string = _string.replace(_string[i], Entities.get(_string.charCodeAt(i)))
+                console.log(Entities[34])
+            }
         }
     }
+    return _string;    
 };
 
 //34 42 47 58 60 62 63 92 124
