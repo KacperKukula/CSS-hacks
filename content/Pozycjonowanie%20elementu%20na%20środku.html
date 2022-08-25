@@ -1,0 +1,59 @@
+<h1>Pozycjonowanie elementu na środku</h1>
+<h2>Pozycjonowanie elementu absolutnego</h2>
+<p>
+  Pozycjonowanie elementu w centrum ekranu przyspożyło mi wiele nerwów.
+  Przeszukując internet natrafiłem na wiele konceptów. Najlepszy okazał się
+  sposób z pozycjonowaniem elementu abolutnego.
+</p>
+<pre><code class="language-css">
+    .element {
+        postionion: absolute;
+        top: 0; right: 0; bottom: 0; left: 0;
+        margin: 0;
+    }
+
+</code></pre>
+<h2>Centrowanie za pomocą flex-box</h2>
+<p>
+  Można też rozwiązać ten problem poprzez funkcję flex-box, która oferuje
+  pozycjonowanie horyzontalne (horizontal) jak i wertykalne (vertical)
+</p>
+<p>
+  W tym celu w kontenerze (container) implementujemy element (element) i
+  dodajemy kontenerowi atrybury:
+</p>
+<pre><code class="language-css">
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .element {
+        display: block;
+    }
+
+</code></pre>
+<h2>Centrowanie - inne</h2>
+<p>
+  Możemy się zdecydować na trzecie rozwiązanie. Jest to centrowanie "sztywne",
+  tzn. przez atrybuty takie jak padding, margin oraz atrybuty pozycjonowania
+  absolutnego (np. top, right).
+</p>
+<pre><code class="language-css">
+    .static1 {
+        margin: 50% 50%;
+    }
+    .static2 {
+        padding: 50% 50%;
+    }
+    .absolute {
+        top: 50%;
+        left: 50%;
+    }
+</code></pre>
+<p>
+  Pamiętajmy też, że atrybuty padding oraz margin różnią się od siebie jednym
+  szczegółem. <b>Margin</b> określa odległość od innego elementu.
+  <b>Padding</b> określa odległość węzła tekstowego (tekstu) od rodzica (w
+  którym jest napisany).
+</p>

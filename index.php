@@ -26,9 +26,9 @@
         </div>
         <div class="menu">
             <ul>
-                <li>Pozycjonowanie elementu na środku</li>
-                <li>Tajemnicze " " na stronie</li>
-                <li>Tekst na środku elementu</li>
+                <li><a class="menu-link" href='?file=Pozycjonowanie elementu na środku'>Pozycjonowanie elementu na środku</a></li>
+                <li><a class="menu-link" href='?file=Tajemnicza przerwa na stronie'>Tajemnicza przerwa na stronie</a></li>
+                <li><a class="menu-link" href='?file=Tekst na środku elementu'>Tekst na środku elementu</a></li>
             </ul>
         </div>
         <!-- Responsive  -->
@@ -43,16 +43,22 @@
     <!--Right side (article)-->
     <section class="content">
         <article class="display">
-            <h1>Pozycjonowanie elementu na środku</h1>
-            <h2>Pozycjonowanie elementu absolutnego</h2>
-            Pozycjonowanie elementu w centrum ekranu przyspożyło mi wiele nerwów. Przeszukując internet natrafiłem na wiele konceptów. Najlepszy okazał się sposób z pozycjonowaniem elementu abolutnego. 
-            <pre><code class="language-css">
-    .element {
-        postionion: absolute;
-        top: 0; right: 0; bottom: 0; left: 0;
-        margin: 0;
-    }
-            </code></pre>
+            <?php
+                switch(htmlentities($_GET['file'])) {
+                    case 'Pozycjonowanie elementu na środku':
+                        require_once('content/Pozycjonowanie%20elementu%20na%20środku.html');
+                        break;
+                    case 'Tajemnicza przerwa na stronie':
+                        require_once('content/Tajemnicza%20przerwa%20na%20stronie.html');
+                        break;
+                    case 'Tekst na środku elementu':
+                        require_once('content/Tekst%20na%20środku%20elementu.html');
+                        break;
+                    default:
+                }
+            ?>
+            <br />
+            <br />
         </article>
     </section>
     
