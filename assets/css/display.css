@@ -10,11 +10,12 @@
 
 /* Display */
 article.display {
-  width: 95%;
+  width: 100%;
   height: 100%;
   font-size: 18px;
   padding: 20px 2.5% 0 2.5%;
   overflow: scroll;
+  box-sizing: border-box;
 }
 article.display h1 {
   font-size: 36px;
